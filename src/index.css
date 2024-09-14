@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   width: 100vw;
-  overflow-x: hidden;
+  overflow-x:hidden;
   -moz-osx-font-smoothing: grayscale;
 }
 /* For WebKit browsers (Chrome, Safari) */

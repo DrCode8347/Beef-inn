@@ -26,7 +26,7 @@
 
 .homePage {
   width: 100vw;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   padding-top: 50px; /* Space for the navbar */
   background-image: url('./assets/landingpage.jpg');
   background-size: cover; /* Ensure the image covers the section */
@@ -47,16 +47,20 @@
   display: flex; /* Ensures the items are in a row */
 }
 
-.pageLists:hover{
+#pageLists:hover{
   color: rgb(255, 84, 61) ;
 }
 
-.pageLists {
+#pageLists {
   display: inline-block;
   position: relative; /* Necessary for the ::after element */
   margin: 0 20px; /* Space between list items */
   padding: 10px 0;
   cursor: pointer;
+}
+
+#pageLists.active{
+  color: rgb(255, 84, 61)
 }
 
 li:before{
@@ -101,34 +105,21 @@ li:hover:before{
   height: 100%; /* Ensure it takes full height */
 }
 
-/* Glass container remains centered */
-.glassContainer {
-  place-self: center;
-  width: 600px;
-  height: 300px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.26);
-  backdrop-filter: blur(10px);
-}
 
 /* Heading styles */
 .headingtag {
   font-size: 1.5rem; /* Adjust the size of heading */
-  margin: 10; /* Remove any default margin */
+  margin: 10;
 }
 
-/* Welcome text styling */
-.welcome {
-  font-size: 4rem; /* Reduce the size */
-  margin: 120px 0px 0px 0px; /* Remove extra margin */
-}
+
 
 /* Intro paragraph styling */
 .intro {
   overflow-wrap: break-word;
-  font-size: 1.2rem; /* Adjust font size */
+  font-size: 1.2rem; 
   max-width: 800px;
-  padding-left: 30px; /* Reduce the padding */
+  padding-left: 30px; 
   margin: 0; /* Remove any margin */
   
 }
@@ -146,18 +137,18 @@ li:hover:before{
   background-size: cover;
   background-position: center;
   color: white;
-  /* padding-top: 50px; */
+  
 }
 
-.aboutUs{
-  font-size: 4rem; /* Reduce the size */
+.heading{
+  font-size: 4rem; 
   margin: 120px 0px 0px 0px;
 }
-.aboutText{
+.text{
   overflow-wrap: break-word;
-  font-size: 1.2rem; /* Adjust font size */
+  font-size: 1.2rem; 
   max-width: 800px;
-  padding: 0px 30px 0px 30px; /* Reduce the padding */
+  padding: 0px 30px 0px 30px; 
   margin: 0;
 }
 
@@ -167,12 +158,11 @@ li:hover:before{
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  /* background-image: url('./assets/662.jpg'); */
   background-size: cover;
   background-position: center;
   color: white;
   padding-right: 30px;
-  /* padding-top: 50px; */
+  
 }
 .prodContainer{
   display: flex;
@@ -181,6 +171,8 @@ li:hover:before{
   width: 300px;
   height: 300px;
   background-color: white;
+  border: solid 2px;
+  border-color:rgb(255, 84, 61) ;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -198,3 +190,16 @@ li:hover:before{
   grid-gap: 30px; /* Space between grid items */
   padding: 20px;
 }
+
+/* BENEFITS PAGE STYLING */
+.benefits{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+

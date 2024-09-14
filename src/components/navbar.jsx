@@ -1,15 +1,19 @@
 import React from "react";
 
-function NavBar(){
+function NavBar({ activeSection, handleScrollToSection }){
   return (
     <div className="navBar">
       <h2 className="shopName">Beef Inn</h2>
       <div className="pageItems">
         <ul>
-          <li className="pageLists">HomePage</li>
-          <li className="pageLists">About</li>
-          <li className="pageLists">Products</li>
-          <li className="pageLists">Benefits</li>
+          <li id="pageLists"  className={activeSection === "homepage" ? "active" : ""}
+          onClick={() => handleScrollToSection("homepage")}>Home</li>
+          <li id="pageLists" className={activeSection === "about" ? "active" : ""}
+          onClick={() => handleScrollToSection("about")}>About</li>
+          <li id="pageLists" className={activeSection === "products" ? "active" : ""}
+          onClick={() => handleScrollToSection("products")}>Products</li>
+          <li id="pageLists" className={activeSection === "benefits" ? "active" : ""}
+          onClick={() => handleScrollToSection("benefits")}>Benefits</li>
         </ul>
       </div>
     </div>

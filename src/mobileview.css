@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .gridcontainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  .prodContainer{
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: solid 2px;
+  border-color:rgb(255, 84, 61) ;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.prodContainer img {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+}
+}

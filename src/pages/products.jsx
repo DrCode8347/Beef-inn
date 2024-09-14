@@ -15,7 +15,7 @@ export default function Products() {
 
   return (
     <div className="products">
-      <h2 className="aboutUs">Our Products</h2>
+      <h2 className="heading">Our Products</h2>
       <div className="gridcontainer">
         {products.map((product, index) => (
           <ProductContainer
@@ -26,7 +26,7 @@ export default function Products() {
           />
         ))}
       </div>
-      <p className="aboutText">
+      <p className="text">
         All our beef is carefully aged to enhance its natural tenderness and flavor. 
         Whether you’re grilling a perfect steak or slow-cooking a hearty roast, our 
         cuts will provide an unmatched taste experience.
