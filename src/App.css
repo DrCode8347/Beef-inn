@@ -1,38 +1,133 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling issues */
+}
+
+.navBar {
+  position: fixed;
   color: white;
+  background: transparent;
+  max-width: 100vw;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  z-index: 1000; /* Ensure navbar stays on top */
 }
 
-.App-link {
-  color: #61dafb;
+.homePage {
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  padding-top: 50px; /* Space for the navbar */
+  background-image: url('./assets/landingpage.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Center the image */
+  color: white;
+  position: relative; /* Allow the background to extend behind the navbar */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.shopName{
+  color: rgb(255, 84, 61);
+}
+
+.pageItems ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Ensures the items are in a row */
+}
+
+.pageLists:hover{
+  color: rgb(255, 84, 61) ;
+}
+
+.pageLists {
+  display: inline-block;
+  position: relative; /* Necessary for the ::after element */
+  margin: 0 20px; /* Space between list items */
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+li:before{
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: rgb(255, 84, 61) ;
+  border-radius: 50px;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+}
+li:hover:before{
+  transform: scaleX(2);
+}
+
+/* HOME PAGE STYLINGS SECTION */
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/landingpage.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: 50px; /* Ensure the navbar doesn't overlap */
+}
+
+.gradientContainer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; 
+  align-items: center;  */
+  gap: 20px; /* Adjust gap between elements */
+  background-image: linear-gradient(to right, #000000, #00000004);
+  padding: 20px; /* Add some padding inside the container */
+  width: 100%; /* Ensure it takes full width */
+  height: 100%; /* Ensure it takes full height */
+}
+
+/* Glass container remains centered */
+.glassContainer {
+  place-self: center;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(10px);
+}
+
+/* Heading styles */
+.headingtag {
+  font-size: 1.5rem; /* Adjust the size of heading */
+  margin: 0; /* Remove any default margin */
+}
+
+/* Welcome text styling */
+.welcome {
+  font-size: 4rem; /* Reduce the size */
+  margin: 120px 0px 0px 0px; /* Remove extra margin */
+}
+
+/* Intro paragraph styling */
+.intro {
+  overflow-wrap: break-word;
+  font-size: 1.2rem; /* Adjust font size */
+  max-width: 800px;
+  padding-left: 30px; /* Reduce the padding */
+  margin: 0; /* Remove any margin */
+  
 }
